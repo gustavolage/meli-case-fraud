@@ -1,0 +1,62 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "src"
+version = "0.0.1"
+description = "Resolução do case MELI: Desafio Machine Learning"
+authors = [
+  { name = "Gustavo Carvalho Lage Ribeiro" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = "~=3.12"
+dependencies = [
+  "ipywidgets==8.1.5",
+  "joblib==1.4.2",
+  "missingno==0.5.2",
+  "numpy==2.2.3",
+  "pandas==2.2.3",
+  "DateTime==5.5",
+  "scikit-learn==1.6.1",
+  "scipy==1.15.2",
+  "seaborn==0.13.2",
+  "setuptools==75.8.2",
+  "Boruta==0.4.3",
+  "optbinning==0.20.1",
+  "optuna==4.2.1",
+  "xgboost==2.1.4",
+  "lightgbm==4.6.0",
+  "matplotlib==3.10.1",
+  "click==8.1.8",
+  "tqdm==4.67.1",
+  "logger==1.4",
+  "wordcloud==1.9.4",
+  "statsmodels==0.14.4",
+  "Jinja2==3.1.6",
+  "pyarrow==19.0.1"
+]
+
+[tool.poetry]
+packages = [
+    { include = "src" }
+]
+
+[tool.black]
+line-length = 99
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+)/
+'''
+
+[tool.ruff.lint.isort]
+known_first_party = ["src"]
+force_sort_within_sections = true

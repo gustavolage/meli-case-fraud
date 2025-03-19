@@ -1,0 +1,255 @@
+fraude:
+  target: true
+  created: false
+fecha:
+  type: datetime
+  role: auxiliary
+  created: false
+score:
+  role: auxiliary
+  created: false
+  hard_remove: true
+monto:
+  type: numerical
+  role: descriptive
+  created: false
+  selected_by_boruta: true
+  selected_by_rfecv: true
+a:
+  type: numerical
+  role: descriptive
+  created: false
+  selected_by_boruta: true
+  selected_by_rfecv: true
+b:
+  type: numerical
+  role: descriptive
+  fill_numeric_missing: true
+  created: false
+  selected_by_boruta: true
+  selected_by_rfecv: true
+c:
+  type: numerical
+  role: descriptive
+  fill_numeric_missing: true
+  created: false
+  selected_by_boruta: true
+d:
+  type: numerical
+  role: descriptive
+  fill_numeric_missing: true
+  created: false
+  selected_by_boruta: true
+e:
+  type: numerical
+  role: descriptive
+  fill_numeric_missing: true
+  created: false
+  selected_by_boruta: true
+f:
+  type: numerical
+  role: descriptive
+  fill_numeric_missing: true
+  created: false
+  selected_by_boruta: true
+  selected_by_rfecv: true
+g:
+  type: categorical
+  role: descriptive
+  fill_numeric_missing: true
+  created: false
+  encode: true
+  selected_by_boruta: true
+  selected_by_rfecv: true
+h:
+  type: numerical
+  role: descriptive
+  created: false
+  selected_by_boruta: true
+  selected_by_rfecv: true
+i:
+  type: categorical
+  role: auxiliary
+  created: false
+j:
+  type: categorical
+  role: auxiliary
+  created: false
+k:
+  type: numerical
+  role: descriptive
+  created: false
+l:
+  type: numerical
+  role: descriptive
+  fill_numeric_missing: true
+  created: false
+  selected_by_boruta: true
+  selected_by_rfecv: true
+m:
+  type: numerical
+  role: descriptive
+  fill_numeric_missing: true
+  created: false
+  selected_by_boruta: true
+  selected_by_rfecv: true
+n:
+  type: binary
+  role: descriptive
+  created: false
+  selected_by_boruta: true
+  selected_by_rfecv: true
+o:
+  type: categorical
+  role: descriptive
+  fill_numeric_missing: true
+  created: false
+  selected_by_boruta: true
+  selected_by_rfecv: true
+p:
+  type: categorical
+  role: descriptive
+  created: false
+  fill_numeric_missing: true
+  selected_by_boruta: true
+  selected_by_rfecv: true
+index:
+  type: index
+  role: auxiliary
+  created: true
+week_of_the_year:
+  type: numerical
+  role: auxiliary
+  created: true
+hour:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+weekday:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+dawn_operation:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+monto_div_a:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+  selected_by_rfecv: true
+monto_div_b:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+monto_div_c:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+  selected_by_rfecv: true
+monto_div_d:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+  selected_by_rfecv: true
+monto_div_e:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+monto_div_f:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+  selected_by_rfecv: true
+monto_div_h:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+  selected_by_rfecv: true
+monto_div_k:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+monto_div_l:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+  selected_by_rfecv: true
+monto_div_m:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+  selected_by_rfecv: true
+monto_div_hour:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+  selected_by_rfecv: true
+monto_div_weekday:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+N_op:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+  selected_by_rfecv: true
+f_lower:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+  selected_by_rfecv: true
+l_lower:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+  selected_by_rfecv: true
+m_lower:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+  selected_by_rfecv: true
+n_lower:
+  type: numerical
+  role: descriptive
+  created: true
+  fill_numeric_missing: true
+  selected_by_boruta: true
+  selected_by_rfecv: true
