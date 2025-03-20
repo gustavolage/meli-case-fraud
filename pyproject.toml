@@ -30,7 +30,7 @@ dependencies = [
   "Boruta==0.4.3",
   "optbinning==0.20.1",
   "optuna==4.2.1",
-  "xgboost==2.1.4",
+  "xgboost==3.0.0",
   "lightgbm==4.6.0",
   "matplotlib==3.10.1",
   "click==8.1.8",
@@ -39,7 +39,11 @@ dependencies = [
   "wordcloud==1.9.4",
   "statsmodels==0.14.4",
   "Jinja2==3.1.6",
-  "pyarrow==19.0.1"
+  "pyarrow==19.0.1",
+  "plotly==6.0.1",
+  "kaleido==0.2.1",
+  "openpyxl==3.1.5",
+  "shape==0.47.0"
 ]
 
 [tool.poetry]

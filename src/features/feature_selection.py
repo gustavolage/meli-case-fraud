@@ -42,18 +42,30 @@ def main(dataset, features_config_path):
     logger.info(f'Dataset {dataset} loaded. Shape: {df.shape}')
     
     features_to_select = get_features_by_property(yaml_path=features_config_path, property_name="role", property_value="descriptive")
+    features_to_select = [
+        feature for feature in features_to_select 
+        if feature not in get_features_by_property(yaml_path=features_config_path, property_name="hard_remove")
+    ]
     logger.info(f'Features to be selected: {features_to_select}')
     
     X = df[features_to_select]
     y = df["fraude"]
     
     features_to_encode = get_features_by_property(yaml_path=features_config_path, property_name="encode", property_value=True)
+    features_to_encode = [
+        feature for feature in features_to_encode 
+        if feature not in get_features_by_property(yaml_path=features_config_path, property_name="hard_remove")
+    ]
     logger.info(f'Features to be encoded: {features_to_encode}')
     encoder = OptBinningEncoder(features=features_to_encode)
     encoder.fit(X, y)
     X = encoder.transform(X)
         
     features_to_fill_missing = get_features_by_property(yaml_path=features_config_path, property_name="fill_numeric_missing", property_value=True)
+    features_to_fill_missing = [
+        feature for feature in features_to_fill_missing
+        if feature not in get_features_by_property(yaml_path=features_config_path, property_name="hard_remove")
+    ]
     logger.info(f'Features to fill missing values: {features_to_fill_missing}')
     numeric_missing_encoder = NumericMissing(features_to_fill_missing)
     X = numeric_missing_encoder.fit_transform(X)

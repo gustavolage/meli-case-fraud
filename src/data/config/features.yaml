@@ -34,18 +34,21 @@ c:
   fill_numeric_missing: true
   created: false
   selected_by_boruta: true
+  selected_by_rfecv: true
 d:
   type: numerical
   role: descriptive
   fill_numeric_missing: true
   created: false
   selected_by_boruta: true
+  selected_by_rfecv: true
 e:
   type: numerical
   role: descriptive
   fill_numeric_missing: true
   created: false
   selected_by_boruta: true
+  selected_by_rfecv: true
 f:
   type: numerical
   role: descriptive
@@ -104,12 +107,14 @@ o:
   role: descriptive
   fill_numeric_missing: true
   created: false
+  encode: true
   selected_by_boruta: true
   selected_by_rfecv: true
 p:
   type: categorical
   role: descriptive
   created: false
+  encode: true
   fill_numeric_missing: true
   selected_by_boruta: true
   selected_by_rfecv: true
@@ -127,6 +132,7 @@ hour:
   created: true
   fill_numeric_missing: true
   selected_by_boruta: true
+  selected_by_rfecv: true
 weekday:
   type: numerical
   role: descriptive
@@ -138,6 +144,7 @@ dawn_operation:
   created: true
   fill_numeric_missing: true
   selected_by_boruta: true
+  selected_by_rfecv: true
 monto_div_a:
   type: numerical
   role: descriptive
@@ -151,6 +158,7 @@ monto_div_b:
   created: true
   fill_numeric_missing: true
   selected_by_boruta: true
+  selected_by_rfecv: true
 monto_div_c:
   type: numerical
   role: descriptive
@@ -171,6 +179,7 @@ monto_div_e:
   created: true
   fill_numeric_missing: true
   selected_by_boruta: true
+  selected_by_rfecv: true
 monto_div_f:
   type: numerical
   role: descriptive
@@ -213,12 +222,6 @@ monto_div_hour:
   selected_by_boruta: true
   selected_by_rfecv: true
 monto_div_weekday:
-  type: numerical
-  role: descriptive
-  created: true
-  fill_numeric_missing: true
-  selected_by_boruta: true
-N_op:
   type: numerical
   role: descriptive
   created: true
