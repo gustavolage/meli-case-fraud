@@ -122,6 +122,57 @@ __Latência do modelo desenvolvido__:
 
 Para colocar este modelo em deploy, poderíamos utilizar o AWS SageMaker Endpoint, que permite hospedar e servir modelos de machine learning com alta escalabilidade e baixa latência. Essa abordagem possibilita a criação de endpoints gerenciados, facilitando o monitoramento e a atualização contínua do modelo em produção. Além disso, ao integrar o MLflow, podemos gerenciar o ciclo de vida do modelo, realizar o versionamento, rastrear experimentos e automatizar o deployment. Essa combinação assegura que o modelo esteja sempre atualizado, com métricas e logs monitorados, garantindo robustez e agilidade no ambiente de produção.
 
+## Replicabilidade do Projeto
+
+Para replicar os resultados e executar o fluxo completo do projeto, siga os passos abaixo:
+
+1. **Clone o Repositório**
+
+   ```bash
+   git clone https://seu-repositorio-url.git
+   cd meli-case-fraud
+   ```
+
+2. **Configure o Ambiente Python**
+
+   É recomendado usar um ambiente virtual. Por exemplo:
+
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate  # no Windows
+   # ou
+   source .venv/bin/activate  # no Linux/Mac
+   ```
+
+3. **Instale as Dependências**
+
+   O projeto utiliza um arquivo `pyproject.toml` para gerenciar as dependências. Para instalar, utilize:
+
+   ```bash
+   pip install -e .
+   ```
+
+   Isso instalará todas as dependências listadas (confira o arquivo [pyproject.toml](pyproject.toml) para a lista completa).
+
+4. **Execução dos Scripts de Pipeline**
+
+   Execute os seguintes scripts em sequência para reproduzir o fluxo completo do projeto:
+
+   ```bash
+   python basic_process.py && \
+   python split_tables.py && \
+   python build_features.py && \
+   python feature_selection.py && \
+   python create_encoders.py && \
+   python tuning.py && \
+   python train.py && \
+   python latency.py
+   ```
+
+   **Observações:**
+   - Cada script representa uma etapa do pipeline (pré-processamento, seleção de features, criação de encoders, tuning, treinamento e avaliação de latência).
+   - Caso algum script apresente erro, verifique se os caminhos e os arquivos de entrada (por exemplo, bases de dados, configurações ou modelos pré-treinados) estão corretamente posicionados conforme a estrutura do projeto.
+
 ## Project Organization
 
 ```
